@@ -1,73 +1,61 @@
-const surpriseButton = document.querySelector('#surpriseButton');
-const confettiButton = document.querySelector('#confettiButton');
-const moreLoveButton = document.querySelector('#moreLoveButton');
-const extraMessage = document.querySelector('#extraMessage');
-const toast = document.querySelector('#toast');
-const confettiLayer = document.querySelector('#confettiLayer');
+const $ = (id) => document.getElementById(id);
+const toast = $('toast');
 let toastTimeout;
-
-const sweetMessages = [
-  'Recordatorio importante: eres más increíble de lo que te permites pensar. 💗',
-  'Receta para hoy: 2 abrazos, 3 capítulos, algo rico y cero obligaciones. 📚',
-  'Pupas, Dori, María Elena… tres nombres y una persona muy especial. 🐾',
-  'Si hoy un gato se sienta encima de ti, no es casualidad: te está dando permiso para descansar. 🐈',
-  'La super enfermera también merece que la cuiden, la mimen y le pregunten qué necesita. 🩷'
-];
-const confettiColors = ['#e987a4', '#f4c76b', '#b6a5ec', '#9ec9a0', '#f5b7c8', '#fff0a8'];
-
-function showToast(message) {
+function notify(message) {
   toast.textContent = message;
   toast.classList.add('show');
   clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => toast.classList.remove('show'), 3000);
+  toastTimeout = setTimeout(() => toast.classList.remove('show'), 3200);
 }
-
-function launchConfetti(amount = 95) {
-  confettiLayer.replaceChildren();
-  for (let i = 0; i < amount; i++) {
+function confettiBurst(count = 90) {
+  const layer = $('confetti');
+  const colors = ['#d6ff55', '#ff654e', '#172a26', '#e8bd5d', '#f3f0e7'];
+  for (let i = 0; i < count; i++) {
     const piece = document.createElement('span');
-    piece.className = Math.random() > 0.78 ? 'heart-float' : 'confetti';
-    if (piece.classList.contains('heart-float')) {
-      piece.textContent = Math.random() > 0.5 ? '♡' : '♥';
-      piece.style.left = `${Math.random() * 100}%`;
-      piece.style.fontSize = `${14 + Math.random() * 20}px`;
-      piece.style.animationDelay = `${Math.random() * 1.1}s`;
-    } else {
-      piece.style.left = `${Math.random() * 100}%`;
-      piece.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-      piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '3px';
-      piece.style.setProperty('--duration', `${2.2 + Math.random() * 2.2}s`);
-      piece.style.setProperty('--drift', `${-100 + Math.random() * 200}px`);
-      piece.style.animationDelay = `${Math.random() * 1.2}s`;
-    }
-    confettiLayer.appendChild(piece);
+    piece.className = 'confetti-piece';
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.animationDelay = `${Math.random() * .7}s`;
+    piece.style.animationDuration = `${1.8 + Math.random() * 1.8}s`;
+    piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+    layer.appendChild(piece);
+    setTimeout(() => piece.remove(), 4300);
   }
-  setTimeout(() => confettiLayer.replaceChildren(), 6000);
 }
-
-surpriseButton.addEventListener('click', () => {
-  document.querySelector('#sorpresa').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  document.querySelector('#sorpresa').classList.remove('reveal');
-  void document.querySelector('#sorpresa').offsetWidth;
-  document.querySelector('#sorpresa').classList.add('reveal');
-  launchConfetti(75);
-  showToast('¡Sorpresa desbloqueada! Feliz cumpleaños, María Elena 💗');
+$('openReport').addEventListener('click', () => {
+  $('report').scrollIntoView({ behavior: 'smooth' });
+  notify('Expediente abierto. La paciente niega tener la culpa de sus moratones.');
 });
-
-moreLoveButton.addEventListener('click', () => {
-  const nextMessage = sweetMessages[Math.floor(Math.random() * sweetMessages.length)];
-  extraMessage.textContent = nextMessage;
-  extraMessage.hidden = false;
-  extraMessage.classList.remove('reveal');
-  void extraMessage.offsetWidth;
-  extraMessage.classList.add('reveal');
-  showToast('Una dosis extra de cariño, recién preparada. ✿');
+const memoryTests = [
+  'Pregunta 1: ¿A qué has venido? A) Ni idea. B) ¿Quién eres? C) Ya se me ha olvidado. Resultado: Dori certificada. 🐠',
+  'Test completado: has recordado que hoy es tu cumpleaños. ¡Récord personal! 🏆',
+  'Diagnóstico: memoria selectiva. Recuerdas la letra de una canción de 2009, pero no dónde has dejado el móvil. 📱'
+];
+let memoryIndex = 0;
+$('memoryTest').addEventListener('click', () => {
+  const result = $('memoryResult');
+  result.hidden = false;
+  result.textContent = memoryTests[memoryIndex % memoryTests.length];
+  memoryIndex++;
 });
-
-confettiButton.addEventListener('click', () => {
-  launchConfetti(130);
-  confettiButton.classList.remove('wiggle');
-  void confettiButton.offsetWidth;
-  confettiButton.classList.add('wiggle');
-  showToast('¡Felicidades, Pupas! Que empiece la celebración. 🎉');
+const catAdvice = [
+  'Consejo de guardia: hidrátate y no te tropieces con nada.',
+  'El gato recomienda: tarta primero, responsabilidades mañana.',
+  'Diagnóstico felino: necesitas una siesta y que alguien te traiga snacks.',
+  'Recordatorio de Dori: has abierto esta web para algo. Ah, sí: ¡feliz cumpleaños!',
+  'Pupas, el mobiliario no es tu enemigo. Aunque a veces lo parezca.'
+];
+$('newCatMessage').addEventListener('click', () => {
+  const current = $('catAdvice').textContent;
+  let next = current;
+  while (next === current && catAdvice.length > 1) next = catAdvice[Math.floor(Math.random() * catAdvice.length)];
+  $('catAdvice').textContent = next;
+});
+$('birthdayToast').addEventListener('click', () => {
+  $('signedMessage').hidden = false;
+  notify('Firmado, sellado y archivado. ¡Felicidades, María Elena!');
+});
+$('celebrate').addEventListener('click', () => {
+  confettiBurst(130);
+  notify('¡FELIZ CUMPLE, PUPAS DORI! Se autoriza tarta sin límite.');
 });

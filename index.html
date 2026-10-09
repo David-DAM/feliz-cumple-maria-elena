@@ -3,122 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff4f0">
-  <meta name="description" content="Una pequeña sorpresa de cumpleaños para María Elena: gatos, libros, cariño y una super enfermera.">
-  <title>Feliz cumpleaños, María Elena 💗</title>
+  <meta name="theme-color" content="#172a26">
+  <meta name="description" content="Parte oficial de cumpleaños de María Elena: Pupas, Dori y super enfermera titular.">
+  <title>Expediente M.E. — Feliz cumple, Pupas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-icon">♡</span> un rinconcito para ti</a>
-    <span class="top-note">hecho con mucho cariño <span aria-hidden="true">✿</span></span>
+    <a class="brand" href="#top"><span class="brand-mark">✚</span> ARCHIVO DE CASOS ESPECIALES</a>
+    <span class="top-status"><i></i> INFORME CONFIDENCIAL (más o menos)</span>
   </header>
 
-  <main>
-    <section class="hero section" id="inicio">
+  <main id="top">
+    <section class="hero wrap">
       <div class="hero-copy">
-        <p class="eyebrow"><span>✦</span> hoy es un día especial <span>✦</span></p>
-        <h1>Feliz cumpleaños,<br><em>María Elena</em> 💗</h1>
-        <p class="hero-lead">Hoy toca celebrar a una persona bonita, una lectora de mundos, una amante de los gatitos y una <strong>super enfermera</strong> con superpoderes de verdad.</p>
-        <button class="primary-button" id="surpriseButton" type="button">Abrir tu pequeña sorpresa <span aria-hidden="true">♡</span></button>
-        <p class="tiny-note">P.D.: sí, Pupas y Dori, esto también va por vosotras. 🐈</p>
-      </div>
-      <div class="hero-art" aria-label="Ilustración de cumpleaños con un gatito">
-        <div class="sunburst"></div>
-        <div class="hero-sticker sticker-heart">♥</div>
-        <div class="hero-sticker sticker-sparkle">✧</div>
-        <div class="cat-frame">
-          <img src="https://cataas.com/cat/cute?width=700&height=800" alt="Un gatito adorable para celebrar el cumpleaños" loading="eager">
-          <div class="cat-caption">miau, es tu día ✨</div>
+        <p class="kicker"><span class="stamp">URGENTE</span> <span>09 / EXPEDIENTE DE CUMPLEAÑOS</span></p>
+        <h1>FELIZ<br><span>CUMPLE,</span><br>MARÍA ELENA<span class="period">.</span></h1>
+        <p class="lead">Se informa a la población de que hoy cumple años una <strong>super enfermera</strong>, paciente cero de los accidentes tontos y sospechosa habitual de olvidar por qué había entrado en una habitación.</p>
+        <div class="hero-actions">
+          <button class="button button-lime" id="openReport">LEER INFORME <span>↘</span></button>
+          <span class="microcopy">Clasificación: adorable, pero un peligro.</span>
         </div>
-        <div class="floating-note note-book">📚 <span>un capítulo<br>más</span></div>
-        <div class="floating-note note-coffee">☕ <span>modo<br>cozy</span></div>
+        <div class="case-tags"><span>#PUPAS</span><span>#DORI</span><span>#GATOSDEGUARDIA</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-label">PRUEBA A / SOSPECHOSA FELINA</div>
+        <div class="cat-photo"><img src="https://cataas.com/cat?width=700&height=850" alt="Gato con cara de estar juzgando el expediente" fetchpriority="high"><span class="photo-mark">¿EN SERIO?</span></div>
+        <div class="case-number">CASO Nº <strong>ME-001</strong><br><small>ESTADO: EN OBSERVACIÓN</small></div>
+        <div class="round-stamp">100%<br><b>PUPAS</b></div>
       </div>
     </section>
 
-    <section class="wish-banner section" id="sorpresa" aria-live="polite">
-      <span class="banner-flower" aria-hidden="true">✿</span>
-      <div>
-        <p class="eyebrow">un deseo para ti</p>
-        <h2 id="wishTitle">Que este nuevo año te trate tan bonito como tú tratas a los demás.</h2>
-        <p id="wishText">Que nunca te falten libros que te atrapen, tardes tranquilas, gatos que se acurruquen contigo y motivos para sonreír.</p>
-      </div>
-      <span class="banner-doodle" aria-hidden="true">♡</span>
-    </section>
+    <section class="ticker" aria-label="Aviso de cumpleaños"><div>HOY NO SE ATIENDEN DRAMAS <b>✳</b> SOLO TARTA <b>✳</b> PUPAS EN OBSERVACIÓN <b>✳</b> DORI, REVISA DÓNDE HAS DEJADO EL REGALO <b>✳</b> HOY NO SE ATIENDEN DRAMAS <b>✳</b></div></section>
 
-    <section class="section reasons-section">
-      <div class="section-heading">
-        <p class="eyebrow">pequeñas grandes cosas</p>
-        <h2>Un poquito de todo lo que te hace <em>tú</em></h2>
-        <p>Porque una felicitación normal se nos quedaba corta.</p>
-      </div>
-      <div class="reason-grid">
-        <article class="reason-card card-pink">
-          <div class="card-icon">🩺</div><span class="card-number">01 / superpoderes</span>
-          <h3>Super enfermera</h3>
-          <p>Cuidadora profesional, calmadora de nervios y probablemente capaz de arreglar un mal día con una mezcla de paciencia y magia.</p>
-          <span class="card-foot">heroína sin capa, pero con pijama sanitario ✨</span>
-        </article>
-        <article class="reason-card card-lilac">
-          <div class="card-icon">🐾</div><span class="card-number">02 / expediente gatuno</span>
-          <h3>Pupas &amp; Dori</h3>
-          <p>Dos apodos, mil historias y energía de gatita que se mete en líos… pero a la que es imposible no querer.</p>
-          <span class="card-foot">miau aprobado por el comité felino</span>
-        </article>
-        <article class="reason-card card-yellow">
-          <div class="card-icon">📖</div><span class="card-number">03 / no molestar</span>
-          <h3>Modo cozy</h3>
-          <p>Un libro bueno, una mantita, algo calentito y el mundo esperando un ratito fuera. El plan perfecto también es no tener plan.</p>
-          <span class="card-foot">solo interrumpir para traer snacks</span>
-        </article>
+    <section class="wrap report-section" id="report">
+      <div class="section-head"><p class="kicker">01 — DIAGNÓSTICO</p><h2>Tenemos los resultados.</h2><p>Tras una investigación rigurosa (preguntarle a un gato), este es el parte oficial.</p></div>
+      <div class="report-grid">
+        <article class="report-card card-green"><div class="card-top"><span>INFORME MÉDICO</span><span>01/03</span></div><div class="big-icon">🩺</div><h3>Super enfermera</h3><p>Capaz de cuidar a todo el mundo, mantener la calma y resolver marrones profesionales. La paciente, sin embargo, no siempre aplica ese criterio consigo misma.</p><div class="meter"><span style="width:98%"></span></div><div class="meter-label"><span>VOCACIÓN</span><b>98%</b></div></article>
+        <article class="report-card card-red"><div class="card-top"><span>PARTE DE LESIONES</span><span>02/03</span></div><div class="big-icon">🩹</div><h3>Alias: Pupas</h3><p>Presenta una capacidad extraordinaria para tener siempre algún golpe, rasguño o lesión misteriosa. Se recomienda reposo, precaución y dejar de pelearse con el mobiliario.</p><div class="fake-alert">⚠ NUEVO MORATÓN DETECTADO</div></article>
+        <article class="report-card card-yellow"><div class="card-top"><span>MEMORIA RAM</span><span>03/03</span></div><div class="big-icon">🧠</div><h3>Alias: Dori</h3><p>Ha venido a buscar algo. No recuerda qué. En cualquier caso, ha llegado hasta aquí y eso ya cuenta como progreso.</p><button class="text-button" id="memoryTest">HACER TEST DE MEMORIA ↗</button><p class="test-result" id="memoryResult" hidden></p></article>
       </div>
     </section>
 
-    <section class="cat-break section">
-      <div class="cat-break-image">
-        <img src="https://cataas.com/cat/cute?width=650&height=520" alt="Gatito mirando con ternura" loading="lazy">
-        <span class="image-doodle">♡</span>
-      </div>
-      <div class="cat-break-copy">
-        <p class="eyebrow">comunicado oficial del departamento de gatos</p>
-        <h2>Hoy las únicas urgencias son…</h2>
-        <ul class="cute-list">
-          <li><span>✓</span> recibir mimos en cantidades industriales</li>
-          <li><span>✓</span> leer “solo un capítulo más” (varias veces)</li>
-          <li><span>✓</span> comer algo rico sin compartirlo si no apetece</li>
-          <li><span>✓</span> recordar lo mucho que vales</li>
-        </ul>
-        <p class="cat-signature">Firmado: el sindicato de gatitos adorables 🐈</p>
+    <section class="dark-zone">
+      <div class="wrap cat-section">
+        <div class="cat-copy"><p class="kicker">02 — PERSONAL DE APOYO</p><h2>El equipo médico<br>ha solicitado <span>refuerzos.</span></h2><p>Los gatos se han presentado voluntarios. No tienen título, no saben poner una tirita y uno se ha comido el informe. Pero transmiten confianza.</p><div class="cat-quote">“Miau. Que le den tarta a esta humana.”<br><small>— Dirección General de Gatos</small></div><button class="button button-outline" id="newCatMessage">RECIBIR CONSEJO FELINO ↗</button><p class="cat-advice" id="catAdvice" aria-live="polite">Consejo de guardia: hidrátate y no te tropieces con nada.</p></div>
+        <div class="cat-panel"><img src="https://cataas.com/cat/cute?width=700&height=650" alt="Gato de guardia supervisando el cumpleaños" loading="lazy"><div class="cat-panel-caption"><span>GATO DE GUARDIA</span><b>NO PARECE CUALIFICADO</b></div></div>
       </div>
     </section>
 
-    <section class="little-note-section section">
-      <div class="note-card">
-        <div class="note-top"><span>una notita para ti</span><span aria-hidden="true">✧ ✿ ✧</span></div>
-        <p class="letter">Espero que hoy te sientas muy querida. Que la vida te regale días tranquilos, aventuras bonitas, historias que te hagan olvidar la hora y muchísimas razones para reírte. Y que, cuando el mundo vaya demasiado deprisa, siempre encuentres un lugarcito cómodo donde parar, respirar y ser tú misma.</p>
-        <p class="letter-end">Feliz cumpleaños, María Elena. No pierdas nunca esa forma tan tuya de hacer especiales las pequeñas cosas. <span>♡</span></p>
-        <button class="secondary-button" id="moreLoveButton" type="button">Necesito otra dosis de ternura <span>✿</span></button>
-        <p class="extra-message" id="extraMessage" hidden></p>
+    <section class="wrap birthday-section">
+      <div class="section-head"><p class="kicker">03 — TRATAMIENTO RECOMENDADO</p><h2>Receta para el nuevo año.</h2><p>Administrar a demanda. No hace falta pedir cita.</p></div>
+      <div class="prescription">
+        <div class="rx-mark">Rx</div><div class="rx-content"><p class="mono">PACIENTE: MARÍA ELENA · DOSIS: ILIMITADA</p><ul><li><span>01</span> Un montón de libros que te enganchen hasta las tantas.</li><li><span>02</span> Gatos, mantita y planes tranquilos sin ninguna obligación social.</li><li><span>03</span> Risas hasta que te duela la tripa (lesión no incluida en el expediente).</li><li><span>04</span> Gente que te cuide tan bien como tú cuidas a los demás.</li><li><span>05</span> Un año con salud, aventuras bonitas y cero visitas al traumatólogo.</li></ul><div class="rx-sign">FIRMA: TU PERSONA FAVORITA <span>✍</span></div></div>
       </div>
     </section>
 
-    <section class="finale section">
-      <div class="finale-stars" aria-hidden="true">✦　♡　✧　♡　✦</div>
-      <p class="eyebrow">fin del mensaje, no de los mimos</p>
-      <h2>Que tu día sea tan bonito<br>como <em>tú, Dori.</em></h2>
-      <p>Y que siempre haya un gatito cerca para recordártelo. 🐾</p>
-      <button class="primary-button" id="confettiButton" type="button">Celebrar otra vez 🎉</button>
-    </section>
+    <section class="wrap message-section"><div class="message-card"><div class="message-top"><span>MENSAJE PERSONAL · NO ARCHIVAR</span><span>♥</span></div><h2>Fuera bromas un segundo.</h2><p>Espero que tengas un día genial, que te mimen mucho y que este año te traiga un montón de cosas buenas. Eres una persona increíble, una enfermera de diez y alguien con quien da gusto compartir ratos, incluso cuando hay que hacer de detective para averiguar qué se te ha olvidado esta vez.</p><p>Feliz cumpleaños, Pupas. Feliz cumpleaños, Dori. Que sigas siendo tú, que te pasen cosas buenas (y menos cosas que requieran una tirita) y que nunca te falten motivos para reírte.</p><button class="button button-dark" id="birthdayToast">FIRMAR Y SELLAR FELICITACIÓN ✓</button><div class="signed" id="signedMessage" hidden>✔ FELICITACIÓN REGISTRADA. ABRAZO PENDIENTE DE ENTREGA.</div></div></section>
+
+    <section class="final wrap"><p class="kicker">CASO CERRADO</p><h2>FELIZ CUMPLE,<br><span>PUPAS DORI.</span></h2><p>Diagnóstico final: bastante genial. Pronóstico: otro año dando guerra. 🐈</p><button class="button button-lime" id="celebrate">ACTIVAR CELEBRACIÓN ✳</button><div class="final-foot">DOCUMENTO OFICIALMENTE POCO OFICIAL · HECHO PARA MARÍA ELENA</div></section>
   </main>
-
-  <footer class="footer"><span>hecho a mano, con cariño y un poquito de magia</span><span>♡ para María Elena ♡</span></footer>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  <footer class="footer"><span>ARCHIVO DE CASOS ESPECIALES ©</span><span>NO OLVIDES DÓNDE HAS DEJADO ESTA PÁGINA.</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><div class="confetti" id="confetti" aria-hidden="true"></div>
 </body>
 </html>
